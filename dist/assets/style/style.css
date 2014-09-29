@@ -272,7 +272,7 @@ body {
   vertical-align: top;
 }
 
-@media all and (max-width: 640) {
+@media only screen and (max-width: 640px) {
   .slice > .slice-item {
     display: table-row;
   }
