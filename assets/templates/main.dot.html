@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>alexmattorr</title>
+    <meta name="description" content="" />
+    <meta name="author"      content="" />
+    <meta name="viewport"    content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="../assets/style/min/style.css" rel="stylesheet" />
+</head>
+
+<body >
+    <div id="container" {{? it.document.class}}class="{{= it.document.class }}"{{?}} >
+
+        <!-- header -->
+        {{= it.include("header") }}
+
+        <!-- content -->
+        <div id="content">
+            {{= it.document }}
+        </div>
+
+        <!-- footer -->
+        {{= it.include("footer") }}
+    </div>
+
+    <script type="text/javascript" src="../assets/svg/grunticon.loader.js"></script>
+    <script type="text/javascript" src="../assets/scripts/lib.js"></script>
+    <script type="text/javascript" src="../assets/scripts/app.js"></script>
+</body>
+</html>

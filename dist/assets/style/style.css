@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix {
+  *-zoom: 1;
+  overflow: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(assets/library/boxsizing.htc);
+}
+
+html {
+  font-size: 10px;
+  color: #6c6c6c;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #f9f9f9;
+  text-transform: none;
+  text-decoration: none;
+  text-align: left;
+  word-wrap: normal;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  tap-highlight-color: transparent;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
+#content {
+  padding-bottom: 230px;
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 9.5px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 8.5px;
+  }
+}
+
+.icon {
+  -ms-behavior: url("/dist/assets/library/backgroundsize.min.htc");
+  background-position: center center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  display: block;
+}
+
+.icon-8 {
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+.icon-14 {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.icon-16 {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.icon-22 {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.icon-24 {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.icon-27 {
+  width: 27px;
+  height: 27px;
+  display: block;
+}
+
+.icon-28 {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.icon-32 {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.icon-34 {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.icon-38 {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.icon-48 {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.icon-60 {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.icon-72 {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+
+.icon-90 {
+  width: 90px;
+  height: 90px;
+  display: block;
+}
+
+.icon-360 {
+  width: 360px;
+  height: 360px;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

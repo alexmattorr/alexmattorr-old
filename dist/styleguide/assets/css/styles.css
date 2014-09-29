@@ -1,0 +1,393 @@
+body { background: white; }
+
+/* Header Override */
+.main-header {
+    position: absolute !important;
+}
+/* KSS */
+#kss-nav {
+    width: 20%;
+    background-color: #eee;
+    box-shadow: inset -15px 0 15px -15px rgba(45,45,45,.25);
+    overflow: auto;
+}
+
+#kss-nav a {
+    color: #666;
+    text-decoration: none;
+}
+
+#kss-nav a:hover { color: #0b0080; }
+
+#kss-nav nav {
+    padding: 2.4em;
+}
+#kss-nav nav > ul {
+    margin: 2em;
+    margin-top: 2.5em;
+    list-style-type: none;
+}
+.styleguide {
+    background: #fff;
+    max-width: 100%;
+    width: 100%;
+}
+.kss-title {
+    width: 100%;
+
+    font-size: 25px!important;
+    clear: both;
+}
+
+.kss-filename {
+    margin-bottom: 30px;
+    color: #999;
+}
+
+#kss-header {
+    font-family: "Antenna Regular";
+    height: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    padding: 20px 0 20px 0;
+    box-shadow: inset -15px 0 15px -15px rgba(45,45,45,.25);
+}
+
+.kss-name {
+    font-family: "Antenna Regular";
+    position: relative;
+    width: 100%;
+    font-size: 24px;
+    z-index: 1;
+    padding: 0 0 20px 0;
+}
+
+#kss-header h1 {
+    font-size: 1.5em;
+    padding: 0 1.33em;
+}
+#kss-main,
+#kss-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#kss-nav {
+    position: fixed;
+    bottom: 0;
+    width: 25%;
+    overflow-x: scroll;
+
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+    box-shadow: inset -15px 0 15px -15px rgba(45,45,45,.15)
+}
+
+#kss-main {
+    padding: 0 2.5%;
+    left: 25%;
+    right: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
+/* DSS */
+
+
+#wrapper {
+}
+
+#wrapper nav {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 40px;
+    margin: 0;
+    font-size: 14px;
+}
+
+#wrapper nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper nav ul li {
+    /*list-style: disc;*/
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 2rem;
+
+}
+/* Fix for global header styles */
+#wrapper nav ul li.header-link-item {
+    line-height: 1.58rem;
+    margin-bottom: 0;
+    padding: 24px 12px 28px;
+}
+
+#wrapper nav ul li.header-link-item.logo {
+    padding: 0;
+}
+
+#wrapper nav ul li.header-link-item.logo:hover {
+    background: #FFF;
+}
+
+#wrapper .file {
+    border-bottom: 1px dotted #ccc;
+    padding: 0 0 30px 0;
+    margin: 0;
+
+    display: none;
+
+}
+    #wrapper .file.is-active { display: block; }
+
+
+
+
+#wrapper .file h3 {
+    margin: 0 0 30px 0;
+    padding-top: 30px;
+    font-size: 48px;
+}
+
+#wrapper .block {
+    border: 1px solid #ccc;
+    margin: 0 0 20px 0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#wrapper .info {
+    padding: 20px;
+    background: #efefef;
+    border-bottom: 1px solid #ccc;
+}
+
+#wrapper .info h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+#wrapper .info .description {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#wrapper .info .state {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+#wrapper .info .state span {
+    font-weight: bold;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+#wrapper .example {
+    padding: 20px;
+    min-height: 60px;
+    display: block;
+    font-size: 13px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+#wrapper .example pre {
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+#wrapper .example-wrapper {
+    display: block;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+#wrapper .state {}
+
+#wrapper .state .name {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    padding: 10px;
+}
+
+#wrapper .markup {
+    margin: 0;
+    padding: 20px;
+    font-size: 13px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    background: #efefef;
+}
+
+
+/* GitHub Theme */
+
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+
+/* plain text */
+
+.pln {
+    color: #333333;
+}
+@media screen {
+    /* string content */
+
+.str {
+        color: #dd1144;
+   }
+   /* a keyword */
+
+.kwd {
+       color: #333333;
+  }
+  /* a comment */
+
+.com {
+      color: #999988;
+ }
+ /* a type name */
+
+.typ {
+     color: #445588;
+}
+/* a literal value */
+
+.lit {
+    color: #445588;
+}
+/* punctuation */
+
+.pun {
+    color: #333333;
+}
+/* lisp open bracket */
+
+.opn {
+    color: #333333;
+}
+/* lisp close bracket */
+
+.clo {
+    color: #333333;
+}
+/* a markup tag name */
+
+.tag {
+    color: navy;
+}
+/* a markup attribute name */
+
+.atn {
+    color: teal;
+}
+/* a markup attribute value */
+
+.atv {
+    color: #dd1144;
+}
+/* a declaration */
+
+.dec {
+    color: #333333;
+}
+/* a variable name */
+
+.var {
+    color: teal;
+}
+/* a function name */
+
+.fun {
+    color: #990000;
+}
+}
+/* Use higher contrast and text-weight for printable form. */
+
+@media print,
+projection {
+    .str {
+        color: #006600;
+   }
+   .kwd {
+       color: #006;
+       font-weight: bold;
+  }
+  .com {
+      color: #600;
+      font-style: italic;
+ }
+ .typ {
+     color: #404;
+     font-weight: bold;
+}
+.lit {
+    color: #004444;
+}
+.pun,
+.opn,
+.clo {
+    color: #444400;
+}
+.tag {
+    color: #006;
+    font-weight: bold;
+}
+.atn {
+    color: #440044;
+}
+.atv {
+    color: #006600;
+}
+}
+/* Style */
+
+pre.prettyprint {
+    background: white;
+    font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px;
+}
+/* Specify class=linenums on a pre to get line numbering */
+
+ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* IE indents via margin-left */
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+    /* */
+}
+/* Alternate shading for lines */
+
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+    /* */
+}

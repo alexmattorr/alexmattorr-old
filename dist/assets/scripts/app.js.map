@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "app.js",
+  "sources": [
+    "assets/app/app.js",
+    "assets/app/modules/base.js",
+    "assets/app/modules/myModule.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,E;ACTA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,yC;AChDA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,qB",
+  "sourcesContent": [
+    "var app = (function() {\n\tvar defaults = [];\n\treturn { \n\n\t}\n})();\n\n$(function() {\n\tnew app.base();\n})",
+    "// base functions\napp.base = (function($, _ , app, grunticon) {\n\n\tvar def = function() {\n\t\tapp.options = {};\n\n\t\t// setup touch for mobile\n\t\tapp.options.uAgent = navigator.userAgent;\n    app.options.interaction = app.options.uAgent.match(/(iPad|iPhone|iPod)/g) ? \"touchstart\" : \"click\";\n\n\t\tinit.call(this);\n\t};\n\n\tvar init = function(){\n\t\tthis.gruntIcon();\n\t\t// this.module();\n\t};\n\n\tdef.prototype = {\n\t\t// grunticon\n\t\tgruntIcon: function() {\n\t\t\tgrunticon([\"../assets/svg/icons.data.svg.css\", \"../assets/svg/icons.data.png.css\", \"../assets/svg/icons.fallback.css\"]);\n\t\t\t\n\t\t\t// ie8 hack for icons\n\t\t\t\tsetTimeout(function(){\n\t\t\t\t\t$('.icon').hide();\n\t\t\t\t\t$('.icon').show();\n\t\t\t\t}, 1200);\n\n\t\t},\n\n\t\t// a module\n\t\tmodule: function() {\n\t\t\t$('#content').each(function() {\n\t\t\t\t//////////////////////////////////////////////////////// \n\t\t\t\t/*\n\t\t\t\twe instantiate in this way so that we\n\t\t\t\tcan access our methods from the frontend with jQuery\n\t\t\t\tlike: `$('#content').data().myModule._methodName_();`\n\t\t\t\t*/\n\t\t\t\t////////////////////////////////////////////////////////\n\t\t\t\t$(this).data('myModule', new app.myModule(this));\n\t\t\t});\n\t\t}\n\n\t};\n\n\treturn def;\n}).call(this, jQuery, _, app, grunticon);",
+    "/*app.myModule = (function($, _, app) {\n\n\tvar def = function(el) {\n\t\tthis.$els = {\n\t\t\t'item': el,\n\t\t\t'trigger': '.my-module-trigger'\n\t\t};\n\n\t\tthis.trigger = '<button class=\"button my-module-trigger\">Click me, I do JavaScript</button>';\n\n\t\tthis.options = {\n\t\t\t'bgColor' : '#d6d6d6',\n\t\t\t'target' : '#content .wrapper'\n\t\t}\n\n\t\tinit.call(this);\n\n\t};\n\n\tvar init = function() {\n\t\tthis.setup();\n\t\tthis.addColor();\n\t};\n\n\tdef.prototype = {\n\n\t\tsetup: function() {\n\t\t\tvar self = this;\n\t\t\t$(this.options.target).append(this.trigger);\n\t\t\t$(this.$els.trigger).on('click', function() {\n\t\t\t\tself.toggle();\n\t\t\t});\n\t\t},\n\n\t\ttoggle: function() {\n\t\t\tthis.on ? this.reset() : this.addColor();\n\t\t},\n\n\t\taddColor: function() {\n\t\t\t$(this.$els.item).css('background-color', this.options.bgColor);\n\t\t\tthis.on = true;\n\t\t},\n\n\t\treset: function() {\n\t\t\t$(this.$els.item).css('background-color', '');\n\t\t\tthis.on = false;\n\t\t}\n\t}\n\n\treturn def;\n\n})(jQuery, _, app);*/"
+  ]
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Styleguide</title>
+
+    <!-- our stylesheet -->
+    <link rel="stylesheet" href="../assets/style/style.css?v=1" type="text/css" />
+
+    <!-- guide stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+
+    <!-- svg stylesheet loader -->
+    <script type="text/javascript" src="../assets/svg/grunticon.loader.js"></script>
+
+    <!-- library scripts -->
+    <script src="assets/js/jquery/jquery.js"></script>
+    <script src="assets/js/underscore/underscore.js"></script>
+    <script src="assets/js/stringjs/string.js"></script>
+    <script src="assets/js/beautify/beautify-html.js"></script>
+    <script src="assets/js/dotjs/doT.js"></script>
+
+    <script>
+    $(function() {
+
+        // replace filepaths with name (dss doesn't do this)
+        $("[data-file]").each(function() { 
+            var file = $(this).attr("data-file"),
+                title;
+
+            title = _.chain(file.split("/"))  // to array impl.
+                        .last() // get last segment of file path 
+                        .rest() // drop the "_" from file name
+                        .initial(5) // drop filename 
+                        .value();  // get raw value
+
+            $(this).text(_.first(title).toUpperCase() + _.rest(title).join("") + " (." + title.join("") + ")");
+        });
+ 
+        //setup states, since we don't follow dss conventions
+        $("[data-state]").each(function() {
+            var $this = $(this);
+            $this.children().addClass($this.attr("data-state").replace(/\./g, ' '));
+            $this.next().empty().text($.trim($this.html()));
+        });
+
+        // render template
+        $("[data-template]").each(function() {
+            var $this = $(this),
+                $view = $this.find(".example-view"),
+                $markup = $this.find(".markup"),
+                data = $view.closest("[data-data]").attr("data-data") || null,
+                $states = $("[data-state]");
+
+            data = data != null ? JSON.parse(data) : {};
+
+            $.ajax({
+                url: "../../assets/templates/" + $this.attr('data-template')
+            }).done(function(template) {
+                var tFunc = doT.template(template),
+                    render = tFunc(data);
+
+                $view.html(render);
+                $markup.text(html_beautify(render, { unformatted: ['em', 'br', 'a', 'sub', 'sup', 'b', 'i', 'u'] }));
+
+                // debugger;
+
+                _.defer(function() {
+                    prettyPrint();
+                    $states.each(function() {
+                        var $this = $(this);
+                        $this.children().addClass($this.attr("data-state").replace(/\./g, ' '));
+                        $this.next().empty().text($.trim($this.html()));
+                    });
+                })
+            }).fail(function() {
+                $markup.text("Loading template failed")
+            });
+        });
+
+
+        $(".prettyprint").each(function() {
+            var $this = $(this);
+
+            var text = html_beautify($this.text(), { unformatted: ["a", ""] });
+
+            // debugger;
+            $this.text(text);
+        });
+
+        $.getScript("assets/js/prettify/prettify.js")
+            .done(function() {
+                prettyPrint();
+            });
+
+
+
+        // navigation and sluging
+        var $sections = $("[data-name]");
+
+        $sections.each(function() {
+            var $this = $(this);
+
+            $this.attr("data-name", S($this.attr("data-name")).slugify().s);
+                
+            if ($this.filter("a").length > 0)
+                $this.attr("href", "#" + S($this.attr("href").substr(1)).slugify().s);
+        });
+
+        $sections
+            .on("click", function() {
+                if( $(this).prop("tagName") == "A") { // make sure we're not catching clicks that are just on the matching div
+                    var $this = $(this),
+                        script = $('div[data-name="'+ $this.attr("data-name") +'"] [data-script]').attr('data-script') || null;
+
+                    if($this.attr("data-name") == "view-all") {
+                        $("[data-name]").addClass("is-active");
+                    } else {
+                        $sections.removeClass("is-active").filter(function() {
+                            return ($(this).attr("data-name") == $this.attr("data-name"));
+                        }).addClass("is-active");
+                    }
+
+                    _.defer(function() {
+                        script != null ? eval(script) : "";
+                    });
+                }
+            })
+            .filter("[data-name=" + _.rest(window.location.hash).join("") + "]")
+            .trigger("click")
+
+        $(window).on('hashchange', function() {
+            $sections 
+                .filter("[data-name=" + _.rest(window.location.hash).join("") + "]")
+                .trigger("click");
+        });
+
+        grunticon([ "assets/svg/icons.data.svg.css", "assets/svg/icons.data.png.css", "assets/svg/icons.fallback.css" ]); 
+    });
+    </script>
+</head>
+<body>
+
+<div id="wrapper"><div id="kss-wrapper">
+    <div id="kss-nav">
+        <header id="kss-header">
+            <hgroup><h1 class="kss-title">Styleguide</h1></hgroup>
+        </header>
+
+        <aside>
+            <nav><ul>
+                <li><a href="#view-all" data-name="view-all">View All</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </ul></nav>
+        </aside>
+    </div>
+
+    <div role="main" id="kss-main">
+        <article id="kss-content">
+            <div class="styleguide">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </article>
+    </div>
+</div>
+<script type="text/javascript" src="../assets/library/lib.js"></script>
+<script type="text/javascript" src="../assets/scripts/jnpr.js"></script>
+</body>
+</html>

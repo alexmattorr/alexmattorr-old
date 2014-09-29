@@ -1,0 +1,21 @@
+{
+  "name": "JMS Frontend Boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "developers@johnmcneilstudio.com"
+  ],
+  "main": "README.md",
+  "license": "Copyright 2014",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "underscore": "~1.6.0"
+  }
+}
