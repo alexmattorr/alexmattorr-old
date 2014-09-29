@@ -135,7 +135,7 @@ table {
   border-spacing: 0;
 }
 
-.clearfix {
+.cf {
   *-zoom: 1;
   overflow: hidden;
 }
@@ -148,37 +148,14 @@ table {
 }
 
 html {
-  font-size: 10px;
-  color: #6c6c6c;
   height: 100%;
   width: 100%;
 }
 
 body {
-  background: #f9f9f9;
-  text-transform: none;
-  text-decoration: none;
-  text-align: left;
-  word-wrap: normal;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  font-variant: normal;
-  font-style: normal;
-  font-weight: normal;
-  font-family: Arial, Helvetica, sans-serif;
   font-smoothing: antialiased;
-  text-size-adjust: 100%;
-  tap-highlight-color: transparent;
-}
-
-#container {
-  min-height: 100%;
-  position: relative;
-}
-
-#content {
-  padding-bottom: 230px;
 }
 
 @media only screen and (max-width: 1024px) {

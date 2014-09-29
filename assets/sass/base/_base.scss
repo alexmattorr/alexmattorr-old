@@ -8,42 +8,14 @@ $EXTENDBASE: true;
 }
 
 html {
-	font-size: $baseline;
-	color: $site-color;
     height: 100%;
     width: 100%;
 }
 
 body {
-    background: $site-background;
-
-    text-transform: none;
-    text-decoration: none;
-    text-align: left;
-
-    word-wrap: normal;
-
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
-
-    font-variant: normal;
-    font-style: normal;
-    font-weight: normal;
-
-    font-family: $base-font;
-
     font-smoothing: antialiased;
-    text-size-adjust: 100%;
-    tap-highlight-color: transparent;
-}
-
-#container {
-    min-height: 100%;
-    position: relative;
-}
-#content {
-    padding-bottom: $footer-height;
 }
 
 @include tablet-l() {
