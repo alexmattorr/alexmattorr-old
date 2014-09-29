@@ -1,5 +1,3 @@
-// sets whether to extend standard modules
-// to their logical base elements 
 $EXTENDBASE: true;
 
 * { 
@@ -19,13 +17,13 @@ body {
 }
 
 @include tablet-l() {
-    html { font-size: 9.5px; }
+
 }
 
 @include tablet() {
-    html { font-size: 9px; }
+
 }
 
 @include phone() {
-    html { font-size: 8.5px; }
+
 }

@@ -7,38 +7,37 @@
 // global spacing
 
 // responsive
-	// global breaks
-	$tiny: 320;
-	$small: 480;
-	$phone: 640;
-	$phone-l: 768;
-	$tablet: 960;
-	$tablet-l: 1024;
-	$full: 1080; // set to the same as wrapper-width
-	$desktop: 1280;
+$tiny: 320;
+$small: 480;
+$phone: 640;
+$phone-l: 768;
+$tablet: 960;
+$tablet-l: 1024;
+$full: 1080;
+$desktop: 1280;
 
-	// build media queries
-	@mixin tiny() {
-		@include respond-to($tiny) { @content; }
-	}
-	@mixin small() {
-		@include respond-to($small) { @content; }
-	}
-	@mixin phone() {
-		@include respond-to($phone) { @content; }
-	}
-	@mixin phone-l() {
-		@include respond-to($phone-l) { @content; }
-	}
-	@mixin tablet() {
-		@include respond-to($tablet) { @content; }
-	}
-	@mixin tablet-l() {
-		@include respond-to($tablet-l) { @content; }
-	}
-	@mixin full() {
-		@include respond-to($full) { @content; }
-	}
-	@mixin desktop() {
-		@include respond-to($desktop) { @content; }
-	}
+// build media queries
+@mixin tiny() {
+	@include respond-to($tiny) { @content; }
+}
+@mixin small() {
+	@include respond-to($small) { @content; }
+}
+@mixin phone() {
+	@include respond-to($phone) { @content; }
+}
+@mixin phone-l() {
+	@include respond-to($phone-l) { @content; }
+}
+@mixin tablet() {
+	@include respond-to($tablet) { @content; }
+}
+@mixin tablet-l() {
+	@include respond-to($tablet-l) { @content; }
+}
+@mixin full() {
+	@include respond-to($full) { @content; }
+}
+@mixin desktop() {
+	@include respond-to($desktop) { @content; }
+}
