@@ -261,4 +261,21 @@ body {
   margin: 0 auto;
 }
 
+.slice {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.slice-item {
+  display: table-cell;
+  vertical-align: top;
+}
+
+@media all and (max-width: 640) {
+  .slice > .slice-item {
+    display: table-row;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
