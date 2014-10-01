@@ -5,7 +5,6 @@
 // //////     <div class="stick-em-up"></div>
 //
 // ///////////////////////////////////////////////
-
 app.StickEmUp = (function($, app) {
     
     var def = function(el) {

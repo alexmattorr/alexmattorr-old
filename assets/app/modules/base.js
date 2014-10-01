@@ -29,19 +29,25 @@ app.base = (function($, _ , app, grunticon) {
 
 		},
 
+		stickEmUp: function() {
+			$(document).ready(function() {
+			 	new app.StickEmUp('.stick-em-up');
+			 });
+		}
+
 		// a module
-		module: function() {
+		/*module: function() {
 			$('#content').each(function() {
 				//////////////////////////////////////////////////////// 
-				/*
+				
 				we instantiate in this way so that we
 				can access our methods from the frontend with jQuery
 				like: `$('#content').data().myModule._methodName_();`
-				*/
+				
 				////////////////////////////////////////////////////////
 				$(this).data('myModule', new app.myModule(this));
 			});
-		}
+		}*/
 
 	};
 
